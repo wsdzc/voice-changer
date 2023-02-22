@@ -10,7 +10,7 @@ export type ServerSettingState = {
 
 export const useModelSettingArea = (): ServerSettingState => {
     const appState = useAppState()
-    const [showPyTorch, setShowPyTorch] = useState<boolean>(true)
+    const [showPyTorch, setShowPyTorch] = useState<boolean>(false)
 
     const accodionButton = useMemo(() => {
         const accodionButtonProps: HeaderButtonProps = {
@@ -150,7 +150,7 @@ export const useModelSettingArea = (): ServerSettingState => {
                         <div className="body-button left-margin-1" onClick={onConfigFileClearClicked}>clear</div>
                     </div>
                 </div>
-                <div className="body-row split-3-3-4 left-padding-1 guided">
+                {/* <div className="body-row split-3-3-4 left-padding-1 guided">
                     <div className="body-item-title left-padding-2">Correspondence</div>
                     <div className="body-item-text">
                         <div>{correspondenceFileText}</div>
@@ -160,7 +160,7 @@ export const useModelSettingArea = (): ServerSettingState => {
                         <div className="body-button left-margin-1" onClick={onCorrespondenceFileClearClicked}>clear</div>
                     </div>
                 </div>
-
+ */}
                 <div className="body-row split-3-3-4 left-padding-1 guided">
                     <div className="body-item-title left-padding-2">Onnx(.onnx)</div>
                     <div className="body-item-text">

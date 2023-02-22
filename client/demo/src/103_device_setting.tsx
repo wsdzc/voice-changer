@@ -321,9 +321,9 @@ export const useDeviceSetting = (): DeviceSettingState => {
                             Device Setting
                         </span>
                         <span className="belongings">
-                            <input className="belongings-checkbox" type="checkbox" checked={useServerMicrophone} onChange={(e) => {
+                            {/* <input className="belongings-checkbox" type="checkbox" checked={useServerMicrophone} onChange={(e) => {
                                 setUseServerMicrophone(e.target.checked)
-                            }} /> use server mic (Experimental)
+                            }} /> use server mic (Experimental) */}
                         </span>
                     </div>
 

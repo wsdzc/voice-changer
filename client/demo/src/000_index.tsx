@@ -27,13 +27,13 @@ const App = () => {
         return (
             <div className="top-title">
                 <span className="title">Voice Changer Setting</span>
-                <span className="top-title-version">for v.1.5.x</span>
+                <span className="top-title-version">for v.1.3.x</span>
                 <span className="belongings">
                     <a className="link" href="https://github.com/w-okada/voice-changer" target="_blank" rel="noopener noreferrer">
                         <img src="./assets/icons/github.svg" />
                         <span>github</span>
                     </a>
-                    <a className="link" href="https://zenn.dev/wok/books/0003_vc-helper-v_1_5" target="_blank" rel="noopener noreferrer">
+                    <a className="link" href="https://zenn.dev/wok/books/0002_vc-helper-v_1_3" target="_blank" rel="noopener noreferrer">
                         <img src="./assets/icons/help-circle.svg" />
                         <span>manual</span>
                     </a>

@@ -92,15 +92,15 @@ export type ServerInfo = VoiceChangerServerSetting & {
 }
 
 export const DefaultServerSetting: ServerInfo = {
-    srcId: 0,
-    dstId: 101,
+    srcId: 107,
+    dstId: 100,
     gpu: 0,
 
     crossFadeOffsetRate: 0.0,
     crossFadeEndRate: 1.0,
     crossFadeOverlapSize: CrossFadeOverlapSize[1024],
 
-    framework: Framework.PyTorch,
+    framework: Framework.ONNX,
     f0Factor: 1.0,
     onnxExecutionProvider: OnnxExecutionProvider.CPUExecutionProvider,
     f0Detector: F0Detector.dio,
@@ -248,8 +248,8 @@ export type VOICE_CHANGER_CLIENT_EXCEPTION = typeof VOICE_CHANGER_CLIENT_EXCEPTI
 ////////////////////////////////////
 // indexedDB
 ////////////////////////////////////
-export const INDEXEDDB_DB_APP_NAME = "INDEXEDDB_KEY_VOICE_CHANGER_V.1.3"
-export const INDEXEDDB_DB_NAME = "INDEXEDDB_KEY_VOICE_CHANGER_DB_V.1.3"
+export const INDEXEDDB_DB_APP_NAME = "INDEXEDDB_KEY_VOICE_CHANGER"
+export const INDEXEDDB_DB_NAME = "INDEXEDDB_KEY_VOICE_CHANGER_DB"
 export const INDEXEDDB_KEY_CLIENT = "INDEXEDDB_KEY_VOICE_CHANGER_LIB_CLIENT"
 export const INDEXEDDB_KEY_SERVER = "INDEXEDDB_KEY_VOICE_CHANGER_LIB_SERVER"
 export const INDEXEDDB_KEY_WORKLETNODE = "INDEXEDDB_KEY_VOICE_CHANGER_LIB_WORKLETNODE"

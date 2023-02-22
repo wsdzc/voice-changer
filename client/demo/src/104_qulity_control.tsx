@@ -106,26 +106,26 @@ export const useQualityControl = (): QualityControlState => {
         appState.clientSetting.updateClientSetting
     ])
 
-    const f0DetectorRow = useMemo(() => {
-        const desc = { "harvest": "High Quality", "dio": "Light Weight" }
-        return (
-            <div className="body-row split-3-7 left-padding-1 guided">
-                <div className="body-item-title left-padding-1 ">F0 Detector</div>
-                <div className="body-select-container">
-                    <select className="body-select" value={appState.serverSetting.serverSetting.f0Detector} onChange={(e) => {
-                        appState.serverSetting.updateServerSettings({ ...appState.serverSetting.serverSetting, f0Detector: e.target.value as F0Detector })
-                    }}>
-                        {
-                            Object.values(F0Detector).map(x => {
-                                //@ts-ignore
-                                return <option key={x} value={x}>{x}({desc[x]})</option>
-                            })
-                        }
-                    </select>
-                </div>
-            </div>
-        )
-    }, [appState.serverSetting.serverSetting.f0Detector, appState.serverSetting.updateServerSettings])
+    // const f0DetectorRow = useMemo(() => {
+    //     const desc = { "harvest": "High Quality", "dio": "Light Weight" }
+    //     return (
+    //         <div className="body-row split-3-7 left-padding-1 guided">
+    //             <div className="body-item-title left-padding-1 ">F0 Detector</div>
+    //             <div className="body-select-container">
+    //                 <select className="body-select" value={appState.serverSetting.serverSetting.f0Detector} onChange={(e) => {
+    //                     appState.serverSetting.updateServerSettings({ ...appState.serverSetting.serverSetting, f0Detector: e.target.value as F0Detector })
+    //                 }}>
+    //                     {
+    //                         Object.values(F0Detector).map(x => {
+    //                             //@ts-ignore
+    //                             return <option key={x} value={x}>{x}({desc[x]})</option>
+    //                         })
+    //                     }
+    //                 </select>
+    //             </div>
+    //         </div>
+    //     )
+    // }, [appState.serverSetting.serverSetting.f0Detector, appState.serverSetting.updateServerSettings])
 
 
     const recordIORow = useMemo(() => {
@@ -274,12 +274,11 @@ export const useQualityControl = (): QualityControlState => {
             <>
                 {noiseControlRow}
                 {gainControlRow}
-                {f0DetectorRow}
                 <div className="body-row divider"></div>
                 {recordIORow}
             </>
         )
-    }, [gainControlRow, noiseControlRow, f0DetectorRow, recordIORow])
+    }, [gainControlRow, noiseControlRow, recordIORow])
 
 
     const qualityControl = useMemo(() => {
