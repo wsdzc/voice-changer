@@ -33,6 +33,31 @@ export const AppStateProvider = ({ children }: Props) => {
     useEffect(() => {
         if (clientState.clientState.initialized) {
             initializedRef.current = true
+
+            clientState.clientState.clientSetting.updateClientSetting({
+                ...clientState.clientState.clientSetting.clientSetting, speakers: [
+                    {
+                        "id": 107,
+                        "name": "user"
+                    },
+                    {
+                        "id": 100,
+                        "name": "ずんだもん"
+                    },
+                    {
+                        "id": 101,
+                        "name": "そら"
+                    },
+                    {
+                        "id": 102,
+                        "name": "めたん"
+                    },
+                    {
+                        "id": 103,
+                        "name": "つむぎ"
+                    }
+                ]
+            })
         }
     }, [clientState.clientState.initialized])
 
