@@ -19,7 +19,6 @@ from const import NATIVE_CLIENT_FILE_MAC, NATIVE_CLIENT_FILE_WIN, SSL_KEY_DIR
 import subprocess
 import multiprocessing as mp
 
-
 def setupArgParser():
     parser = argparse.ArgumentParser()
     parser.add_argument("-t", type=str, default="MMVC",

@@ -2,12 +2,20 @@ import logging
 
 # logging.getLogger('numba').setLevel(logging.WARNING)
 
-class UvicornSuppressFilter(logging.Filter):
+class LogSuppressFilter(logging.Filter):
     def filter(self, record):
         return False
 
 logger = logging.getLogger("uvicorn.error")
-logger.addFilter(UvicornSuppressFilter())
+logger.addFilter(LogSuppressFilter())
+
+
+logger = logging.getLogger("matplotlib")
+logger.addFilter(LogSuppressFilter())
+
+logger = logging.getLogger("matplotlib.font_manager")
+logger.addFilter(LogSuppressFilter())
+
 
 # logger.propagate = False
 
