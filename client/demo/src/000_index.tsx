@@ -56,7 +56,7 @@ const App = () => {
         const onClearSettingClicked = async () => {
             await appState.clearSetting()
             await removeItem(INDEXEDDB_KEY_AUDIO_OUTPUT)
-            // location.reload()
+            location.reload()
         }
         return (
             <>
