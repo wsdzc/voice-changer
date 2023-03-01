@@ -347,7 +347,7 @@ class VoiceChanger():
                 "sid_src": sid_src.numpy(),
                 "sid_tgt": sid_tgt1.numpy()
             })[0][0, 0] * self.hps.data.max_wav_value
-            
+
         if hasattr(self, 'np_prev_audio1') == True:
             overlapSize = min(self.settings.crossFadeOverlapSize, inputSize)
             prev_overlap = self.np_prev_audio1[-1 * overlapSize:]
@@ -467,7 +467,7 @@ class VoiceChanger():
                     del self.np_prev_audio1
                 if hasattr(self, "prev_audio1"):
                     del self.prev_audio1
-                return np.zeros(1).astype(np.int16)
+                return np.zeros(1).astype(np.int16), [0, 0, 0]
         mainprocess_time = t.secs
 
         with Timer("post-process") as t:
